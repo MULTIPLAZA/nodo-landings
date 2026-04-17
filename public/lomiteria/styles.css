@@ -406,6 +406,28 @@ code {
   border: 1px solid #2563eb;
 }
 
+/* ---------- COMBO PHOTO (galería "qué incluye") ---------- */
+.combo-photo {
+  margin: 0 auto 24px;
+  max-width: 560px;
+  text-align: center;
+}
+.combo-photo img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+.combo-photo figcaption {
+  margin-top: 10px;
+  color: var(--color-gray);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
 /* ---------- FEATURES (qué incluye) ---------- */
 .features {
   list-style: none;
@@ -1026,4 +1048,7 @@ code {
   }
 
   .hero__image { max-width: 640px; }
+
+  .combo-photo { max-width: 640px; }
+  .combo-photo img { max-width: 640px; }
 }
