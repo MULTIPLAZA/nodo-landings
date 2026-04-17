@@ -1,0 +1,22 @@
+# macOS / Windows
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (por si sumamos tooling después)
+node_modules/
+npm-debug.log*
+yarn-error.log
+
+# Variables locales
+.env
+.env.local
+
+# Cloudflare
+.wrangler/

@@ -1,0 +1,3 @@
+PLACEHOLDER — reemplazar por favicon.ico real (32x32 px).
+Podés generar uno en https://favicon.io a partir del logo NODO.
+Luego borrá este .txt.
