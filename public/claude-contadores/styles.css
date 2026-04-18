@@ -461,6 +461,14 @@ section {
     font-weight: 400;
 }
 
+.hook-line-3 em {
+    color: var(--coral);
+    font-style: italic;
+    font-weight: 600;
+    background: linear-gradient(180deg, transparent 72%, rgba(204, 120, 92, 0.25) 72%);
+    padding: 0 4px;
+}
+
 .hook-cta {
     display: inline-flex;
     align-items: center;
@@ -483,22 +491,10 @@ section {
     box-shadow: 0 12px 30px rgba(204, 120, 92, 0.4);
 }
 
-/* Variante hype (mismo estilo, reutilizable) */
-.hook-banner.hook-hype::before,
-.hook-banner.hook-hype::after {
-    background: var(--cream);
-    opacity: 0.3;
-}
-
+/* Variante hype (mismo estilo, reutilizable) — mantiene coral como el top */
 .hook-banner.hook-hype .hook-label {
-    border-color: var(--cream);
-    color: var(--cream);
-}
-
-.hook-banner.hook-hype .hook-line-2 strong {
-    background: linear-gradient(180deg, transparent 68%, rgba(255, 255, 255, 0.12) 68%);
-    color: var(--cream);
-    font-style: normal;
+    color: var(--coral);
+    border-color: var(--coral);
 }
 
 @media (max-width: 720px) {
