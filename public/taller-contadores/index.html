@@ -20,18 +20,20 @@
 </head>
 <body>
 
-<!-- Claude Code SVG symbol (reutilizable) -->
+<!-- Claude Code SVG symbol (reutilizable — 8 pills radiales, look "cangrejito") -->
 <svg width="0" height="0" style="position:absolute">
   <symbol id="claude-logo" viewBox="0 0 32 32">
     <g fill="currentColor">
-      <ellipse cx="16" cy="4" rx="1.6" ry="5.5"/>
-      <ellipse cx="16" cy="28" rx="1.6" ry="5.5"/>
-      <ellipse cx="4" cy="16" rx="5.5" ry="1.6"/>
-      <ellipse cx="28" cy="16" rx="5.5" ry="1.6"/>
-      <ellipse cx="16" cy="4" rx="1.4" ry="5" transform="rotate(45 16 16)"/>
-      <ellipse cx="16" cy="28" rx="1.4" ry="5" transform="rotate(45 16 16)"/>
-      <ellipse cx="4" cy="16" rx="5" ry="1.4" transform="rotate(45 16 16)"/>
-      <ellipse cx="28" cy="16" rx="5" ry="1.4" transform="rotate(45 16 16)"/>
+      <rect x="14.4" y="2" width="3.2" height="11" rx="1.6"/>
+      <rect x="14.4" y="19" width="3.2" height="11" rx="1.6"/>
+      <rect x="2" y="14.4" width="11" height="3.2" rx="1.6"/>
+      <rect x="19" y="14.4" width="11" height="3.2" rx="1.6"/>
+      <g transform="rotate(45 16 16)">
+        <rect x="14.8" y="3" width="2.4" height="10" rx="1.2"/>
+        <rect x="14.8" y="19" width="2.4" height="10" rx="1.2"/>
+        <rect x="3" y="14.8" width="10" height="2.4" rx="1.2"/>
+        <rect x="19" y="14.8" width="10" height="2.4" rx="1.2"/>
+      </g>
     </g>
   </symbol>
 </svg>
@@ -56,11 +58,11 @@
         </div>
         <div class="hero-claude-mark">
             <svg class="hero-logo-icon"><use href="#claude-logo"/></svg>
-            <span>Powered by Claude Code</span>
+            <span>Hecho con Claude Code</span>
         </div>
-        <h1>Automatizá tu estudio contable con <span class="accent">Claude Code</span></h1>
+        <h1>Tu estudio contable, <span class="accent">reinventado en un sábado.</span></h1>
         <p class="hero-sub">
-            En 5 horas salís con un sistema real funcionando en tu notebook, listo para usar con tus clientes el lunes. No es un curso más de IA — es la herramienta que los devs serios están usando, adaptada para tu profesión.
+            5 horas. Llegás con tu notebook y tus Excel. Te vas con un sistema corriendo en internet que tus clientes pueden usar el lunes. No es un curso más de IA — es la herramienta que los ingenieros serios ya están usando, ahora adaptada a tu profesión.
         </p>
         <div class="hero-actions">
             <a href="#registro" class="btn-primary">Reservar mi cupo →</a>
@@ -98,10 +100,23 @@
     </div>
 </section>
 
+<section class="logo-showcase">
+    <div class="container">
+        <div class="logo-showcase-inner">
+            <svg class="big-claude-logo"><use href="#claude-logo"/></svg>
+            <div class="logo-showcase-text">
+                <div class="logo-showcase-label">El taller está construido sobre</div>
+                <div class="logo-showcase-name">Claude Code</div>
+                <p class="logo-showcase-desc">La herramienta de IA más potente que existe hoy, hecha por Anthropic. No es ChatGPT con otro nombre — es una bestia profesional que lee, escribe, ejecuta y publica.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="problema">
     <div class="container">
         <div class="section-label">Por qué este taller</div>
-        <h2>Tus colegas están aprendiendo ChatGPT. Vos vas a estar dos pasos adelante.</h2>
+        <h2>Mientras tus colegas recién descubren ChatGPT, vos ya vas a estar en 2026.</h2>
         <p class="section-intro">
             Claude Code no es un chat más. Es una herramienta profesional que lee archivos, escribe código, se conecta con bases de datos y deploya sistemas — todo desde tu notebook. Lo usan ingenieros en todo el mundo. Muy pocos contadores saben que existe. Eso es tu ventaja.
         </p>
@@ -134,7 +149,7 @@
 <section id="programa">
     <div class="container">
         <div class="section-label">El programa · 5 horas</div>
-        <h2>Todo práctico. Al final del día, salís con un sistema real en tu notebook.</h2>
+        <h2>4 módulos. 5 horas. 1 sistema real funcionando al cierre del día.</h2>
         <p class="section-intro">
             Cero teoría innecesaria. Llegás con Claude Code pre-instalado (te mandamos guía), trabajás con tus propios datos contables y te vas con una mini-web deployada que podés mostrarle a un cliente el lunes.
         </p>
@@ -230,7 +245,7 @@
 <section id="logistica">
     <div class="container">
         <div class="section-label">Detalles prácticos</div>
-        <h2>La logística, resumida.</h2>
+        <h2>Sin letra chica. Así es el sábado.</h2>
 
         <div class="logistics-grid">
             <div class="logistics-item">
@@ -264,7 +279,7 @@
 <section id="registro" class="form-section">
     <div class="container-narrow">
         <div class="section-label">Reservá tu cupo</div>
-        <h2>Solo 3 lugares por sábado.</h2>
+        <h2>Solo 3 asientos cada sábado. El tuyo te espera.</h2>
         <p class="section-intro">
             Completá el formulario y te contactamos por WhatsApp con el precio, la dirección exacta y la fecha disponible más cercana. Sin compromiso.
         </p>
@@ -305,7 +320,7 @@
 <section id="faq">
     <div class="container-narrow">
         <div class="section-label">Dudas frecuentes</div>
-        <h2>Lo que suelen preguntarnos.</h2>
+        <h2>Respuestas directas. Sin vueltas.</h2>
 
         <div style="margin-top: 40px;">
             <details class="faq-item">

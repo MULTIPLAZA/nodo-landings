@@ -289,6 +289,85 @@ section {
     border-top: 1px solid var(--border);
 }
 
+/* --- LOGO SHOWCASE (cangrejito protagonista) --- */
+.logo-showcase {
+    padding: 80px 0;
+    background: var(--ink);
+    color: var(--cream);
+    border-top: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-showcase::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(204, 120, 92, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.logo-showcase-inner {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.big-claude-logo {
+    width: 180px;
+    height: 180px;
+    color: var(--coral);
+    flex-shrink: 0;
+    filter: drop-shadow(0 0 40px rgba(204, 120, 92, 0.4));
+    animation: spin-slow 60s linear infinite;
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.logo-showcase-label {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--coral);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 12px;
+}
+
+.logo-showcase-name {
+    font-family: var(--serif);
+    font-size: clamp(40px, 6vw, 64px);
+    font-weight: 500;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.logo-showcase-desc {
+    font-size: 18px;
+    color: #B8B4A8;
+    line-height: 1.5;
+    max-width: 520px;
+}
+
+@media (max-width: 720px) {
+    .logo-showcase-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 32px;
+    }
+    .big-claude-logo { width: 120px; height: 120px; }
+    .logo-showcase-desc { margin: 0 auto; }
+}
+
 .section-label {
     font-family: var(--mono);
     font-size: 13px;
