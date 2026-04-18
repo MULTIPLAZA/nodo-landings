@@ -233,6 +233,124 @@
     </div>
 </section>
 
+<section id="agente">
+    <div class="container">
+        <div class="section-label">Cómo funciona</div>
+        <h2>Anatomía de tu agente contable personalizado.</h2>
+        <p class="section-intro">
+            Un <em>agente</em> es tu asistente hecho a medida de tu estudio. Vos le enseñás quién sos, qué clientes atendés, cómo cobrás — él ejecuta. Todo en español, sin programar. Así se compone por dentro.
+        </p>
+
+        <div class="agent-grid">
+            <div class="agent-pillar">
+                <div class="pillar-header">
+                    <span class="pillar-num">01</span>
+                    <div>
+                        <span class="pillar-label">Identidad del agente</span>
+                        <h3>CLAUDE.md</h3>
+                    </div>
+                </div>
+                <p class="pillar-desc">El archivo donde definís quién es tu agente. Lo escribís una vez, él lo lee siempre antes de trabajar.</p>
+                <div class="code-block">
+                    <div class="code-comment"># ContadorBot — Estudio Ramírez</div>
+                    <div class="code-line">Atendemos 25 clientes PYME.</div>
+                    <div class="code-line">Rubros: food, retail, servicios.</div>
+                    <div class="code-line">Formato informe: 1 página.</div>
+                    <div class="code-line">Idioma: español. Moneda: Gs.</div>
+                    <div class="code-line">Normativa: SET Paraguay.</div>
+                    <div class="code-line">Herramientas: Excel, SIFEN.</div>
+                </div>
+            </div>
+
+            <div class="agent-pillar">
+                <div class="pillar-header">
+                    <span class="pillar-num">02</span>
+                    <div>
+                        <span class="pillar-label">Atajos del agente</span>
+                        <h3>Slash Commands</h3>
+                    </div>
+                </div>
+                <p class="pillar-desc">Comandos que armás una sola vez. Después los invocás con una línea, siempre con el mismo resultado.</p>
+                <ul class="command-list">
+                    <li><code>/libro-iva</code><span>Procesa y valida el libro IVA del mes</span></li>
+                    <li><code>/informe</code><span>Genera informe mensual del cliente</span></li>
+                    <li><code>/conciliar</code><span>Cruza extracto bancario con libros</span></li>
+                    <li><code>/alertas</code><span>Busca inconsistencias y errores</span></li>
+                    <li><code>/declarar</code><span>Arma la declaración jurada</span></li>
+                </ul>
+            </div>
+
+            <div class="agent-pillar">
+                <div class="pillar-header">
+                    <span class="pillar-num">03</span>
+                    <div>
+                        <span class="pillar-label">Equipo del agente</span>
+                        <h3>Subagentes</h3>
+                    </div>
+                </div>
+                <p class="pillar-desc">Agentes especialistas que tu agente principal puede llamar cuando los necesita. Cada uno es experto en algo específico.</p>
+                <ul class="subagent-list">
+                    <li>
+                        <span class="sub-badge">A</span>
+                        <div><strong>Auditor</strong><span>Detecta errores, duplicados y patrones raros</span></div>
+                    </li>
+                    <li>
+                        <span class="sub-badge">R</span>
+                        <div><strong>Reportero</strong><span>Arma informes ejecutivos con gráficos</span></div>
+                    </li>
+                    <li>
+                        <span class="sub-badge">F</span>
+                        <div><strong>Asesor Fiscal</strong><span>Sugiere deducciones y optimizaciones</span></div>
+                    </li>
+                    <li>
+                        <span class="sub-badge">N</span>
+                        <div><strong>Notificador</strong><span>Alertas automáticas por email/WhatsApp</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="agent-flow">
+            <div class="flow-title-wrap">
+                <span class="flow-label">Un ejemplo real</span>
+                <h3 class="flow-title">Así se ve en acción cuando le pedís un informe:</h3>
+            </div>
+
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="flow-bubble flow-user">Vos</div>
+                    <div class="flow-text"><code>/informe Panadería Ramírez</code></div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-agent">
+                        <svg class="flow-logo"><use href="#claude-logo"/></svg>
+                        ContadorBot
+                    </div>
+                    <div class="flow-text">Lee CLAUDE.md, carga el Excel del cliente</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-sub">Subagente Auditor</div>
+                    <div class="flow-text">Escanea 847 movimientos, detecta 3 anomalías</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-sub">Subagente Reportero</div>
+                    <div class="flow-text">Arma HTML ejecutivo con comparación y gráficos</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-output">✓ Listo</div>
+                    <div class="flow-text">URL pública + PDF + email al cliente · 14 segundos</div>
+                </div>
+            </div>
+
+            <p class="flow-caption">Lo mismo que antes te tomaba 1 día entero, ahora ocurre en lo que tardás en servirte un tereré.</p>
+        </div>
+    </div>
+</section>
+
 <section id="programa">
     <div class="container">
         <div class="section-label">El programa · 5 horas</div>
