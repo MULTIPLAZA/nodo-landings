@@ -338,36 +338,52 @@
         <div class="agent-flow">
             <div class="flow-title-wrap">
                 <span class="flow-label">Un ejemplo real</span>
-                <h3 class="flow-title">Así se ve en acción cuando le pedís un informe:</h3>
+                <h3 class="flow-title">Así se ve la conversación cuando le pedís un informe:</h3>
             </div>
 
-            <div class="flow-steps">
-                <div class="flow-step">
-                    <div class="flow-bubble flow-user">Vos</div>
-                    <div class="flow-text"><code>/informe Panadería Ramírez</code></div>
+            <div class="flow-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-title">
+                        <svg class="terminal-logo"><use href="#claude-logo"/></svg>
+                        claude-code · contadorbot
+                    </span>
                 </div>
-                <div class="flow-arrow">↓</div>
-                <div class="flow-step">
-                    <div class="flow-bubble flow-agent">
-                        <svg class="flow-logo"><use href="#claude-logo"/></svg>
-                        ContadorBot
-                    </div>
-                    <div class="flow-text">Lee CLAUDE.md, carga el Excel del cliente</div>
-                </div>
-                <div class="flow-arrow">↓</div>
-                <div class="flow-step">
-                    <div class="flow-bubble flow-sub">Subagente Auditor</div>
-                    <div class="flow-text">Escanea 847 movimientos, detecta 3 anomalías</div>
-                </div>
-                <div class="flow-arrow">↓</div>
-                <div class="flow-step">
-                    <div class="flow-bubble flow-sub">Subagente Reportero</div>
-                    <div class="flow-text">Arma HTML ejecutivo con comparación y gráficos</div>
-                </div>
-                <div class="flow-arrow">↓</div>
-                <div class="flow-step">
-                    <div class="flow-bubble flow-output">✓ Listo</div>
-                    <div class="flow-text">URL pública + PDF + email al cliente · 14 segundos</div>
+                <div class="terminal-body">
+                    <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">claude</span></div>
+                    <div class="term-line"><span class="term-prompt">&gt;</span><span class="term-you">/informe Panadería Ramírez</span></div>
+
+                    <div class="term-spacer"></div>
+
+                    <div class="term-line"><span class="term-icon">◉</span><span class="term-text">Leyendo <span class="term-hl">CLAUDE.md</span>...</span></div>
+                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Contexto cargado · 25 clientes · formato ejecutivo · español PY</span></div>
+                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Excel del cliente localizado · 847 movimientos de abril</span></div>
+
+                    <div class="term-spacer"></div>
+
+                    <div class="term-line"><span class="term-arrow">→</span><span class="term-text">Invocando <span class="term-hl">Subagente Auditor</span>...</span></div>
+                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Escaneando 847 movimientos</span></div>
+                    <div class="term-line term-sub"><span class="term-warn">!</span><span class="term-muted">3 anomalías detectadas: factura duplicada, monto atípico, fecha fuera de rango</span></div>
+
+                    <div class="term-spacer"></div>
+
+                    <div class="term-line"><span class="term-arrow">→</span><span class="term-text">Invocando <span class="term-hl">Subagente Reportero</span>...</span></div>
+                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Comparativa vs marzo: ventas +14%, margen +3pp</span></div>
+                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">HTML ejecutivo generado con gráficos</span></div>
+
+                    <div class="term-spacer"></div>
+
+                    <div class="term-line term-success"><span class="term-check-big">✓</span><span class="term-done">Informe listo</span></div>
+                    <div class="term-line term-sub"><span class="term-arrow-out">→</span><span class="term-muted">URL: <span class="term-link">https://estudio.pages.dev/ramirez-abril</span></span></div>
+                    <div class="term-line term-sub"><span class="term-arrow-out">→</span><span class="term-muted">PDF guardado en ~/exports/</span></div>
+                    <div class="term-line term-sub"><span class="term-arrow-out">→</span><span class="term-muted">Email enviado al cliente</span></div>
+
+                    <div class="term-spacer"></div>
+
+                    <div class="term-line"><span class="term-comment"># tiempo total: 14.2s</span></div>
+                    <div class="term-line"><span class="term-prompt">&gt;</span><span class="term-cursor"></span></div>
                 </div>
             </div>
 
@@ -506,34 +522,15 @@
     </div>
 </section>
 
-<section id="costo" class="cost-section">
+<section class="hook-banner hook-hype">
     <div class="container-narrow">
-        <div class="section-label danger">La parte incómoda</div>
-        <h2>¿Y si elegís no hacer nada?</h2>
-        <p class="section-intro cost-intro">
-            Es la pregunta que nadie quiere hacerse. Pero te la vamos a hacer igual, porque es más honesto que venderte un curso.
-        </p>
-
-        <div class="cost-blocks">
-            <div class="cost-block">
-                <div class="cost-number">01</div>
-                <p>En <strong>12 meses</strong>, tus clientes más jóvenes van a cambiar a estudios que les entregan informes automatizados con análisis, gráficos y narrativa. Lo que hoy es "premium" va a ser el piso del mercado.</p>
-            </div>
-            <div class="cost-block">
-                <div class="cost-number">02</div>
-                <p>Los estudios que adopten IA ahora van a cobrar <strong>30-50% más</strong> por los mismos servicios. Los que no, van a tener que bajar precios para competir contra sistemas. O cerrar.</p>
-            </div>
-            <div class="cost-block">
-                <div class="cost-number">03</div>
-                <p>Cada sábado que pasa, <strong>tus colegas más rápidos acumulan ventaja compuesta</strong>: plantillas, prompts, sistemas, clientes. En 6 meses, esa ventaja va a ser imposible de alcanzar.</p>
-            </div>
+        <span class="hook-label">El momento</span>
+        <div class="hook-content">
+            <p class="hook-line-1">Cuando veas a Claude hacer en 30 segundos</p>
+            <p class="hook-line-2">lo que te tomaba <strong>3 horas</strong>,</p>
+            <p class="hook-line-3">algo en tu cabeza hace click. Los que ya lo vivieron lo dicen igual: <em>no hay vuelta atrás.</em></p>
         </div>
-
-        <div class="cost-close">
-            <p>La pregunta no es <em>si</em> vas a usar IA en tu estudio.</p>
-            <p>Es <strong>cuándo empezás</strong>.</p>
-            <p class="cost-tagline">Y cada semana que esperás cuesta más que lo que sale el taller.</p>
-        </div>
+        <a href="#registro" class="hook-cta">Quiero vivir eso →</a>
     </div>
 </section>
 
