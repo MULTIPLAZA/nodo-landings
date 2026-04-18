@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es-PY">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatizá tu Estudio Contable con Claude Code — Taller Presencial en San Lorenzo</title>
+<meta name="description" content="Taller presencial de 5 horas para contadores en Paraguay. Aprendé a usar Claude Code para automatizar tu estudio, construir tus propios sistemas y dar un mejor servicio a tus clientes.">
+<meta name="theme-color" content="#F5F1E8">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NODO Informática">
+<meta property="og:url" content="https://nodo-landings.pages.dev/claude-contadores/">
+<meta property="og:title" content="Tu estudio contable, reinventado en un sábado.">
+<meta property="og:description" content="Taller presencial de 5 horas con Claude Code. Automatizá tu estudio, construí tus propios sistemas y dale a tus clientes un servicio que nadie más ofrece. San Lorenzo · Solo 3 cupos.">
+<meta property="og:image" content="https://nodo-landings.pages.dev/claude-contadores/assets/og-image.jpg">
+<meta property="og:image:secure_url" content="https://nodo-landings.pages.dev/claude-contadores/assets/og-image.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Taller Claude Code para contadores — NODO Informática">
+<meta property="og:locale" content="es_PY">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tu estudio contable, reinventado en un sábado.">
+<meta name="twitter:description" content="Taller presencial de 5 horas con Claude Code. Solo 3 cupos cada sábado en San Lorenzo.">
+<meta name="twitter:image" content="https://nodo-landings.pages.dev/claude-contadores/assets/og-image.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Claude Code SVG symbol (reutilizable — 8 pills radiales, look "cangrejito") -->
+<svg width="0" height="0" style="position:absolute">
+  <symbol id="claude-logo" viewBox="0 0 32 32">
+    <g fill="currentColor">
+      <rect x="14.4" y="2" width="3.2" height="11" rx="1.6"/>
+      <rect x="14.4" y="19" width="3.2" height="11" rx="1.6"/>
+      <rect x="2" y="14.4" width="11" height="3.2" rx="1.6"/>
+      <rect x="19" y="14.4" width="11" height="3.2" rx="1.6"/>
+      <g transform="rotate(45 16 16)">
+        <rect x="14.8" y="3" width="2.4" height="10" rx="1.2"/>
+        <rect x="14.8" y="19" width="2.4" height="10" rx="1.2"/>
+        <rect x="3" y="14.8" width="10" height="2.4" rx="1.2"/>
+        <rect x="19" y="14.8" width="10" height="2.4" rx="1.2"/>
+      </g>
+    </g>
+  </symbol>
+</svg>
+
+<nav>
+    <div class="container nav-inner">
+        <div class="logo">
+            <svg class="nav-logo-icon"><use href="#claude-logo"/></svg>
+            NODO Informática
+            <span class="nav-divider">×</span>
+            <span class="nav-claude">Claude Code</span>
+        </div>
+        <a href="#registro" class="nav-cta">Reservar cupo</a>
+    </div>
+</nav>
+
+<!-- Ticker de frenesí IA -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+        <span class="ticker-live">● EN VIVO</span>
+        <span class="ticker-item hot">Big4 reemplaza 30% de sus juniors con IA</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Anthropic valuada en USD 183 mil millones</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item hot">El 70% de tareas contables se automatiza antes de 2027</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">OpenAI cierra ronda de USD 40 mil millones</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item hot">Contadores que dominan IA cobran 40% más</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Deloitte invierte USD 1.400 millones en automatización</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item hot">PwC entrena 5.000 contadores en IA por mes</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">McKinsey: "la IA redefinirá la contabilidad en 24 meses"</span>
+        <span class="ticker-sep">✦</span>
+        <!-- Duplicado para loop seamless -->
+        <span class="ticker-live">● EN VIVO</span>
+        <span class="ticker-item hot">Big4 reemplaza 30% de sus juniors con IA</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Anthropic valuada en USD 183 mil millones</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item hot">El 70% de tareas contables se automatiza antes de 2027</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">OpenAI cierra ronda de USD 40 mil millones</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item hot">Contadores que dominan IA cobran 40% más</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Deloitte invierte USD 1.400 millones en automatización</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item hot">PwC entrena 5.000 contadores en IA por mes</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">McKinsey: "la IA redefinirá la contabilidad en 24 meses"</span>
+        <span class="ticker-sep">✦</span>
+    </div>
+</div>
+
+<header class="hero">
+    <div class="container">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            <span>Taller presencial · San Lorenzo · Solo 3 cupos</span>
+        </div>
+        <div class="hero-claude-mark">
+            <svg class="hero-logo-icon"><use href="#claude-logo"/></svg>
+            <span>Hecho con Claude Code</span>
+        </div>
+        <h1>Tu estudio contable, <span class="accent">reinventado en un sábado.</span></h1>
+        <p class="hero-sub">
+            5 horas. Llegás con tu notebook y tus Excel. Te vas con un sistema corriendo en internet que tus clientes pueden usar el lunes. No es un curso más de IA — es la herramienta que los ingenieros serios ya están usando, ahora adaptada a tu profesión.
+        </p>
+        <div class="hero-actions">
+            <a href="#registro" class="btn-primary">Reservar mi cupo →</a>
+            <a href="#programa" class="btn-secondary">Ver el programa</a>
+        </div>
+        <div class="hero-meta">
+            <span>5 horas · 100% práctico</span>
+            <span>Todos los sábados</span>
+            <span>San Lorenzo — Nodo Informática</span>
+        </div>
+    </div>
+</header>
+
+<section class="terminal-section" style="border-top: none; padding-top: 0;">
+    <div class="container">
+        <div class="terminal">
+            <div class="terminal-header">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-title">
+                    <svg class="terminal-logo"><use href="#claude-logo"/></svg>
+                    claude-code
+                </span>
+            </div>
+            <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-out">claude</span> <span class="terminal-comment"># tu nuevo asistente contable</span></div>
+            <div class="terminal-line"><span class="terminal-prompt">&gt;</span> <span class="terminal-out">analizá el libro IVA de abril y generá un informe</span></div>
+            <div class="terminal-line"><span class="terminal-comment">  procesando 1.247 facturas...</span></div>
+            <div class="terminal-line"><span class="terminal-comment">  ✓ totales calculados</span></div>
+            <div class="terminal-line"><span class="terminal-comment">  ✓ 3 inconsistencias detectadas</span></div>
+            <div class="terminal-line"><span class="terminal-comment">  ✓ informe generado en 14 segundos</span></div>
+            <div class="terminal-line"><span class="terminal-prompt">&gt;</span> <span class="terminal-out">deployá esto en una web para mi cliente</span></div>
+            <div class="terminal-line"><span class="terminal-comment">  ✓ publicado en https://estudio.pages.dev</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="logo-showcase">
+    <div class="container">
+        <div class="logo-showcase-inner">
+            <svg class="big-claude-logo"><use href="#claude-logo"/></svg>
+            <div class="logo-showcase-text">
+                <div class="logo-showcase-label">El taller está construido sobre</div>
+                <div class="logo-showcase-name">Claude Code</div>
+                <p class="logo-showcase-desc">La herramienta de IA más potente que existe hoy, hecha por Anthropic. No es ChatGPT con otro nombre — es una bestia profesional que lee, escribe, ejecuta y publica.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="problema">
+    <div class="container">
+        <div class="section-label">Por qué este taller</div>
+        <h2>Mientras tus colegas recién descubren ChatGPT, vos ya vas a estar en 2026.</h2>
+        <p class="section-intro">
+            Claude Code no es un chat más. Es una herramienta profesional que lee archivos, escribe código, se conecta con bases de datos y deploya sistemas — todo desde tu notebook. Lo usan ingenieros en todo el mundo. Muy pocos contadores saben que existe. Eso es tu ventaja.
+        </p>
+
+        <div class="promise-grid">
+            <div class="promise-item">
+                <span class="icon">01</span>
+                <h4>Ahorrá 10+ horas por mes</h4>
+                <p>Procesamiento de libros IVA, conciliaciones, informes — cosas que hoy te comen sábados enteros se resuelven en minutos.</p>
+            </div>
+            <div class="promise-item">
+                <span class="icon">02</span>
+                <h4>Cobrá más por mejor servicio</h4>
+                <p>Entregá a tus clientes informes ejecutivos con análisis y gráficos que antes solo hacían las consultoras grandes.</p>
+            </div>
+            <div class="promise-item">
+                <span class="icon">03</span>
+                <h4>Construí sistemas propios</h4>
+                <p>Sin saber programar. Claude Code escribe el código — vos decís qué querés. Miniapps, dashboards, validadores.</p>
+            </div>
+            <div class="promise-item">
+                <span class="icon">04</span>
+                <h4>Diferenciate en el mercado</h4>
+                <p>Mientras otros estudios siguen en Excel, vos ofrecés automatización real. Esa es la narrativa que gana clientes en 2026.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="comparacion">
+    <div class="container">
+        <div class="section-label">Antes vs Después</div>
+        <h2>Tu sábado sin Claude Code. Tu sábado con Claude Code.</h2>
+        <p class="section-intro">
+            La diferencia no es "un poco más eficiente". La diferencia es otra profesión.
+        </p>
+
+        <div class="comparison-grid">
+            <div class="comparison-col comparison-before">
+                <div class="comparison-header">
+                    <span class="comparison-tag">Hoy</span>
+                    <h3>Sin Claude Code</h3>
+                </div>
+                <ul class="comparison-list">
+                    <li><strong>Libro IVA:</strong> 4 horas de trabajo</li>
+                    <li><strong>Informe mensual para 1 cliente:</strong> 1 día entero</li>
+                    <li><strong>Detectar errores:</strong> manual, ojo cansado, se escapan</li>
+                    <li><strong>Conciliar extracto bancario:</strong> 3 horas, copy-paste</li>
+                    <li><strong>Capacidad real:</strong> 10 clientes al tope</li>
+                    <li><strong>Modelo de cobro:</strong> por hora trabajada</li>
+                    <li><strong>Tu sábado:</strong> en el estudio, otra vez</li>
+                    <li><strong>Tu competencia:</strong> ofrece lo mismo que vos</li>
+                </ul>
+            </div>
+
+            <div class="comparison-col comparison-after">
+                <div class="comparison-header">
+                    <span class="comparison-tag">En 30 días</span>
+                    <h3>Con Claude Code</h3>
+                </div>
+                <ul class="comparison-list">
+                    <li><strong>Libro IVA:</strong> 3 minutos, automatizado</li>
+                    <li><strong>Informe mensual para 1 cliente:</strong> 10 minutos</li>
+                    <li><strong>Detectar errores:</strong> automático, cobertura 100%</li>
+                    <li><strong>Conciliar extracto bancario:</strong> 5 minutos, 1 comando</li>
+                    <li><strong>Capacidad real:</strong> 30+ clientes sin sumar horas</li>
+                    <li><strong>Modelo de cobro:</strong> por valor entregado</li>
+                    <li><strong>Tu sábado:</strong> libre, familia, descanso</li>
+                    <li><strong>Tu competencia:</strong> se pregunta cómo hacés todo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="agente">
+    <div class="container">
+        <div class="section-label">Cómo funciona</div>
+        <h2>Anatomía de tu agente contable personalizado.</h2>
+        <p class="section-intro">
+            Un <em>agente</em> es tu asistente hecho a medida de tu estudio. Vos le enseñás quién sos, qué clientes atendés, cómo cobrás — él ejecuta. Todo en español, sin programar. Así se compone por dentro.
+        </p>
+
+        <div class="agent-grid">
+            <div class="agent-pillar">
+                <div class="pillar-header">
+                    <span class="pillar-num">01</span>
+                    <div>
+                        <span class="pillar-label">Identidad del agente</span>
+                        <h3>CLAUDE.md</h3>
+                    </div>
+                </div>
+                <p class="pillar-desc">El archivo donde definís quién es tu agente. Lo escribís una vez, él lo lee siempre antes de trabajar.</p>
+                <div class="code-block">
+                    <div class="code-comment"># ContadorBot — Estudio Ramírez</div>
+                    <div class="code-line">Atendemos 25 clientes PYME.</div>
+                    <div class="code-line">Rubros: food, retail, servicios.</div>
+                    <div class="code-line">Formato informe: 1 página.</div>
+                    <div class="code-line">Idioma: español. Moneda: Gs.</div>
+                    <div class="code-line">Normativa: SET Paraguay.</div>
+                    <div class="code-line">Herramientas: Excel, SIFEN.</div>
+                </div>
+            </div>
+
+            <div class="agent-pillar">
+                <div class="pillar-header">
+                    <span class="pillar-num">02</span>
+                    <div>
+                        <span class="pillar-label">Atajos del agente</span>
+                        <h3>Slash Commands</h3>
+                    </div>
+                </div>
+                <p class="pillar-desc">Comandos que armás una sola vez. Después los invocás con una línea, siempre con el mismo resultado.</p>
+                <ul class="command-list">
+                    <li><code>/libro-iva</code><span>Procesa y valida el libro IVA del mes</span></li>
+                    <li><code>/informe</code><span>Genera informe mensual del cliente</span></li>
+                    <li><code>/conciliar</code><span>Cruza extracto bancario con libros</span></li>
+                    <li><code>/alertas</code><span>Busca inconsistencias y errores</span></li>
+                    <li><code>/declarar</code><span>Arma la declaración jurada</span></li>
+                </ul>
+            </div>
+
+            <div class="agent-pillar">
+                <div class="pillar-header">
+                    <span class="pillar-num">03</span>
+                    <div>
+                        <span class="pillar-label">Equipo del agente</span>
+                        <h3>Subagentes</h3>
+                    </div>
+                </div>
+                <p class="pillar-desc">Agentes especialistas que tu agente principal puede llamar cuando los necesita. Cada uno es experto en algo específico.</p>
+                <ul class="subagent-list">
+                    <li>
+                        <span class="sub-badge">A</span>
+                        <div><strong>Auditor</strong><span>Detecta errores, duplicados y patrones raros</span></div>
+                    </li>
+                    <li>
+                        <span class="sub-badge">R</span>
+                        <div><strong>Reportero</strong><span>Arma informes ejecutivos con gráficos</span></div>
+                    </li>
+                    <li>
+                        <span class="sub-badge">F</span>
+                        <div><strong>Asesor Fiscal</strong><span>Sugiere deducciones y optimizaciones</span></div>
+                    </li>
+                    <li>
+                        <span class="sub-badge">N</span>
+                        <div><strong>Notificador</strong><span>Alertas automáticas por email/WhatsApp</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="agent-flow">
+            <div class="flow-title-wrap">
+                <span class="flow-label">Un ejemplo real</span>
+                <h3 class="flow-title">Así se ve en acción cuando le pedís un informe:</h3>
+            </div>
+
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="flow-bubble flow-user">Vos</div>
+                    <div class="flow-text"><code>/informe Panadería Ramírez</code></div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-agent">
+                        <svg class="flow-logo"><use href="#claude-logo"/></svg>
+                        ContadorBot
+                    </div>
+                    <div class="flow-text">Lee CLAUDE.md, carga el Excel del cliente</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-sub">Subagente Auditor</div>
+                    <div class="flow-text">Escanea 847 movimientos, detecta 3 anomalías</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-sub">Subagente Reportero</div>
+                    <div class="flow-text">Arma HTML ejecutivo con comparación y gráficos</div>
+                </div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">
+                    <div class="flow-bubble flow-output">✓ Listo</div>
+                    <div class="flow-text">URL pública + PDF + email al cliente · 14 segundos</div>
+                </div>
+            </div>
+
+            <p class="flow-caption">Lo mismo que antes te tomaba 1 día entero, ahora ocurre en lo que tardás en servirte un tereré.</p>
+        </div>
+    </div>
+</section>
+
+<section id="programa">
+    <div class="container">
+        <div class="section-label">El programa · 5 horas</div>
+        <h2>4 módulos. 5 horas. 1 sistema real funcionando al cierre del día.</h2>
+        <p class="section-intro">
+            Cero teoría innecesaria. Llegás con Claude Code pre-instalado (te mandamos guía), trabajás con tus propios datos contables y te vas con una mini-web deployada que podés mostrarle a un cliente el lunes.
+        </p>
+
+        <div class="curriculum">
+            <div class="module">
+                <div class="module-time">
+                    <span class="hour">1h</span>
+                    Módulo 01
+                </div>
+                <div>
+                    <h3>Fundamentos + tu entorno listo</h3>
+                    <p class="module-desc">Qué es Claude Code, en qué se diferencia de ChatGPT y por qué es la herramienta que te conviene dominar. Verificamos que tu setup funciona.</p>
+                    <ul class="module-list">
+                        <li>Claude Code vs ChatGPT vs Claude web: cuándo usar cada uno</li>
+                        <li>Tu entorno: VS Code, Git y Claude Code funcionando</li>
+                        <li>Primer CLAUDE.md personalizado para tu estudio contable</li>
+                        <li>Conceptos core: agentes, comandos, subagentes (lo esencial)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-time">
+                    <span class="hour">1h</span>
+                    Módulo 02
+                </div>
+                <div>
+                    <h3>Pensar tu trabajo en tareas delegables</h3>
+                    <p class="module-desc">El mayor salto no es técnico, es de mentalidad. Aprendés a identificar qué de tu trabajo operativo se puede delegar a la IA y cómo pedírselo bien.</p>
+                    <ul class="module-list">
+                        <li>Mapeo de tus tareas repetitivas (cada uno con sus datos)</li>
+                        <li>Prompts efectivos para el trabajo contable</li>
+                        <li>Práctica guiada: Claude analiza tu primer Excel real</li>
+                        <li>Detección automática de errores e inconsistencias</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-time">
+                    <span class="hour">2h</span>
+                    Módulo 03
+                </div>
+                <div>
+                    <h3>Construí InformeMax — tu generador de informes</h3>
+                    <p class="module-desc">El corazón del taller. Construimos juntos una mini-aplicación que toma el Excel de un cliente y genera un informe ejecutivo automático con análisis y gráficos.</p>
+                    <ul class="module-list">
+                        <li>Lectura automática de Excel / CSV contables</li>
+                        <li>Cálculos, comparativas y detección de anomalías</li>
+                        <li>Generación de informe ejecutivo en HTML con gráficos</li>
+                        <li>Conexión con tus propios datos (no ejemplos genéricos)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="module">
+                <div class="module-time">
+                    <span class="hour">1h</span>
+                    Módulo 04
+                </div>
+                <div>
+                    <h3>Deploy + tu roadmap personal</h3>
+                    <p class="module-desc">Subís tu sistema a internet con una URL real que podés mostrar. Definís 3 automatizaciones concretas para aplicar en tu estudio la semana siguiente.</p>
+                    <ul class="module-list">
+                        <li>Publicación en GitHub + Cloudflare Pages (URL pública)</li>
+                        <li>Configuración de tu propia API key para seguir usando Claude</li>
+                        <li>Roadmap: 3 automatizaciones para aplicar desde el lunes</li>
+                        <li>Acceso al grupo de WhatsApp de alumnos + 15 días de soporte</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="deliverables">
+            <h3>Qué te llevás al cerrar el sábado</h3>
+            <ul class="deliverable-list">
+                <li>Claude Code configurado en tu notebook</li>
+                <li>CLAUDE.md plantilla para contadores</li>
+                <li>Biblioteca de prompts para trabajo contable</li>
+                <li>InformeMax funcionando con tus datos</li>
+                <li>URL pública en Cloudflare para mostrar a clientes</li>
+                <li>Repo de GitHub con tu primer sistema</li>
+                <li>Grabación completa del taller</li>
+                <li>Certificado de participación</li>
+                <li>Grupo de WhatsApp con los alumnos</li>
+                <li>15 días de soporte post-taller</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="logistica">
+    <div class="container">
+        <div class="section-label">Detalles prácticos</div>
+        <h2>Sin letra chica. Así es el sábado.</h2>
+
+        <div class="logistics-grid">
+            <div class="logistics-item">
+                <div class="label">Duración</div>
+                <div class="value">5 horas<small>Sábados, 9:00 a 14:00hs</small></div>
+            </div>
+            <div class="logistics-item">
+                <div class="label">Lugar</div>
+                <div class="value">San Lorenzo<small>Nodo Informática (dirección al confirmar)</small></div>
+            </div>
+            <div class="logistics-item">
+                <div class="label">Cupos</div>
+                <div class="value">Máximo 3<small>Atención personalizada real</small></div>
+            </div>
+            <div class="logistics-item">
+                <div class="label">Inversión</div>
+                <div class="value">Consultar<small>Información al privado por WhatsApp</small></div>
+            </div>
+            <div class="logistics-item">
+                <div class="label">Requisitos</div>
+                <div class="value">Tu notebook<small>Te mandamos guía de setup previo</small></div>
+            </div>
+            <div class="logistics-item">
+                <div class="label">Incluye</div>
+                <div class="value">Todo<small>Materiales, café, certificado, soporte</small></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="costo" class="cost-section">
+    <div class="container-narrow">
+        <div class="section-label danger">La parte incómoda</div>
+        <h2>¿Y si elegís no hacer nada?</h2>
+        <p class="section-intro cost-intro">
+            Es la pregunta que nadie quiere hacerse. Pero te la vamos a hacer igual, porque es más honesto que venderte un curso.
+        </p>
+
+        <div class="cost-blocks">
+            <div class="cost-block">
+                <div class="cost-number">01</div>
+                <p>En <strong>12 meses</strong>, tus clientes más jóvenes van a cambiar a estudios que les entregan informes automatizados con análisis, gráficos y narrativa. Lo que hoy es "premium" va a ser el piso del mercado.</p>
+            </div>
+            <div class="cost-block">
+                <div class="cost-number">02</div>
+                <p>Los estudios que adopten IA ahora van a cobrar <strong>30-50% más</strong> por los mismos servicios. Los que no, van a tener que bajar precios para competir contra sistemas. O cerrar.</p>
+            </div>
+            <div class="cost-block">
+                <div class="cost-number">03</div>
+                <p>Cada sábado que pasa, <strong>tus colegas más rápidos acumulan ventaja compuesta</strong>: plantillas, prompts, sistemas, clientes. En 6 meses, esa ventaja va a ser imposible de alcanzar.</p>
+            </div>
+        </div>
+
+        <div class="cost-close">
+            <p>La pregunta no es <em>si</em> vas a usar IA en tu estudio.</p>
+            <p>Es <strong>cuándo empezás</strong>.</p>
+            <p class="cost-tagline">Y cada semana que esperás cuesta más que lo que sale el taller.</p>
+        </div>
+    </div>
+</section>
+
+<section id="registro" class="form-section">
+    <div class="container-narrow">
+        <div class="section-label">Reservá tu cupo</div>
+        <h2>Solo 3 asientos cada sábado. El tuyo te espera.</h2>
+        <p class="section-intro">
+            Completá el formulario y te contactamos por WhatsApp con el precio, la dirección exacta y la fecha disponible más cercana. Sin compromiso.
+        </p>
+
+        <form class="form-wrapper" id="registroForm">
+            <div class="form-group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="tel" id="whatsapp" name="whatsapp" required placeholder="0981 234 567">
+            </div>
+            <div class="form-group">
+                <label for="ciudad">Ciudad</label>
+                <input type="text" id="ciudad" name="ciudad" required placeholder="Asunción, San Lorenzo, etc.">
+            </div>
+            <div class="form-group">
+                <label for="experiencia">¿Usás alguna IA hoy en tu trabajo?</label>
+                <select id="experiencia" name="experiencia" required>
+                    <option value="">Elegí una opción</option>
+                    <option value="nada">No uso nada todavía</option>
+                    <option value="chatgpt-basico">Uso ChatGPT de forma básica</option>
+                    <option value="chatgpt-avanzado">Uso ChatGPT seguido</option>
+                    <option value="varias">Uso varias herramientas de IA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="objetivo">¿Qué te gustaría automatizar en tu estudio? (opcional)</label>
+                <textarea id="objetivo" name="objetivo" placeholder="Contame brevemente qué tareas te comen más tiempo..."></textarea>
+            </div>
+            <button type="submit" class="form-submit">Enviar por WhatsApp →</button>
+            <p class="form-note">Te redirige a WhatsApp con tus datos precargados</p>
+        </form>
+    </div>
+</section>
+
+<section id="faq">
+    <div class="container-narrow">
+        <div class="section-label">Dudas frecuentes</div>
+        <h2>Respuestas directas. Sin vueltas.</h2>
+
+        <div style="margin-top: 40px;">
+            <details class="faq-item">
+                <summary class="faq-q">¿Necesito saber programar?</summary>
+                <div class="faq-a">No. Claude Code escribe el código por vos — tu trabajo es decirle qué querés en español. El taller está pensado para contadores sin conocimientos técnicos previos.</div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">¿Qué computadora necesito llevar?</summary>
+                <div class="faq-a">Tu notebook personal, Windows o Mac, con al menos 8GB de RAM. Te mandamos una guía simple 5 días antes para que llegues con todo instalado. Si no podés, también tenemos equipos disponibles.</div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">¿Cuál es la diferencia con ChatGPT?</summary>
+                <div class="faq-a">ChatGPT es un chat dentro del navegador — útil para preguntas sueltas. Claude Code vive en tu computadora, lee tus archivos reales, escribe código, se conecta con bases de datos y publica webs. Es una herramienta profesional, no un chatbot.</div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">¿El costo de Claude Code está incluido?</summary>
+                <div class="faq-a">Durante el taller usás una API key provista por nosotros, sin costo extra. Al final del día te enseñamos a configurar la tuya (cuesta entre 5 y 20 USD al mes según tu uso).</div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">¿Puedo traer datos reales de mis clientes?</summary>
+                <div class="faq-a">Sí, y es altamente recomendado. El taller es mucho más valioso cuando trabajás con tus propios Excel, libros IVA o planillas. Todo queda en tu notebook — nada sale de ahí.</div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">¿Qué pasa si me atraso o tengo dudas después?</summary>
+                <div class="faq-a">Incluye 15 días de soporte por WhatsApp post-taller. Además te sumamos al grupo de alumnos donde compartimos recursos y consultas entre todos.</div>
+            </details>
+            <details class="faq-item">
+                <summary class="faq-q">¿Hay descuento para grupos del mismo estudio?</summary>
+                <div class="faq-a">Sí. Si vienen 2 o 3 personas del mismo estudio, tenemos condiciones especiales. Consultanos por WhatsApp.</div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-brand">
+            <svg class="footer-logo"><use href="#claude-logo"/></svg>
+            <span>Enseñamos con <strong>Claude Code</strong></span>
+        </div>
+        <p>
+            NODO Informática · San Lorenzo, Paraguay<br>
+            <a href="https://wa.me/595992316979" target="_blank">WhatsApp: 0992 316 979</a>
+        </p>
+        <p style="margin-top: 16px; font-size: 12px; color: var(--ink-muted);">
+            Claude Code es una marca de Anthropic. Este taller no está afiliado oficialmente con Anthropic.
+        </p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
