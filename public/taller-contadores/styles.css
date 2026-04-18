@@ -1274,6 +1274,25 @@ h3 {
 
 .term-spacer { height: 10px; }
 
+.term-gs {
+    color: #F4C27A;
+    font-weight: 500;
+}
+
+/* Animación typewriter: estado oculto inicial */
+[data-terminal-animated] .term-line,
+[data-terminal-animated] .term-spacer {
+    opacity: 0;
+    transform: translateY(3px);
+    transition: opacity 0.28s ease-out, transform 0.28s ease-out;
+}
+
+[data-terminal-animated] .term-line.term-visible,
+[data-terminal-animated] .term-spacer.term-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .term-cursor {
     display: inline-block;
     width: 8px;

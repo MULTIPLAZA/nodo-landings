@@ -338,10 +338,10 @@
         <div class="agent-flow">
             <div class="flow-title-wrap">
                 <span class="flow-label">Un ejemplo real</span>
-                <h3 class="flow-title">Así se ve la conversación cuando le pedís un informe:</h3>
+                <h3 class="flow-title">Una conciliación bancaria mensual con Claude Code:</h3>
             </div>
 
-            <div class="flow-terminal">
+            <div class="flow-terminal" data-terminal-animated>
                 <div class="terminal-header">
                     <span class="terminal-dot"></span>
                     <span class="terminal-dot"></span>
@@ -352,42 +352,59 @@
                     </span>
                 </div>
                 <div class="terminal-body">
-                    <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">claude</span></div>
-                    <div class="term-line"><span class="term-prompt">&gt;</span><span class="term-you">/informe Panadería Ramírez</span></div>
+                    <div class="term-line" data-delay="400"><span class="term-prompt">$</span><span class="term-cmd">claude</span></div>
+                    <div class="term-line" data-delay="1100"><span class="term-prompt">&gt;</span><span class="term-you">/conciliar-bancaria "Pollería Don Beto" abril 2026</span></div>
 
-                    <div class="term-spacer"></div>
+                    <div class="term-spacer" data-delay="200"></div>
 
-                    <div class="term-line"><span class="term-icon">◉</span><span class="term-text">Leyendo <span class="term-hl">CLAUDE.md</span>...</span></div>
-                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Contexto cargado · 25 clientes · formato ejecutivo · español PY</span></div>
-                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Excel del cliente localizado · 847 movimientos de abril</span></div>
+                    <div class="term-line" data-delay="700"><span class="term-icon">◉</span><span class="term-text">Leyendo <span class="term-hl">CLAUDE.md</span>...</span></div>
+                    <div class="term-line term-sub" data-delay="300"><span class="term-check">✓</span><span class="term-muted">Cliente: Pollería Don Beto · Rubro: gastronomía · San Lorenzo</span></div>
+                    <div class="term-line term-sub" data-delay="220"><span class="term-check">✓</span><span class="term-muted">Banco principal: Itaú PY · Cta. corriente 123456789</span></div>
+                    <div class="term-line term-sub" data-delay="220"><span class="term-check">✓</span><span class="term-muted">Sistema POS del cliente: NODO · integrado por API</span></div>
 
-                    <div class="term-spacer"></div>
+                    <div class="term-spacer" data-delay="200"></div>
 
-                    <div class="term-line"><span class="term-arrow">→</span><span class="term-text">Invocando <span class="term-hl">Subagente Auditor</span>...</span></div>
-                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Escaneando 847 movimientos</span></div>
-                    <div class="term-line term-sub"><span class="term-warn">!</span><span class="term-muted">3 anomalías detectadas: factura duplicada, monto atípico, fecha fuera de rango</span></div>
+                    <div class="term-line" data-delay="600"><span class="term-arrow">→</span><span class="term-text">Descargando extracto bancario abril 2026...</span></div>
+                    <div class="term-line term-sub" data-delay="400"><span class="term-check">✓</span><span class="term-muted">847 movimientos importados (débitos + créditos)</span></div>
+                    <div class="term-line term-sub" data-delay="220"><span class="term-check">✓</span><span class="term-muted">Total ingresos: <span class="term-gs">Gs. 287.450.000</span></span></div>
+                    <div class="term-line term-sub" data-delay="220"><span class="term-check">✓</span><span class="term-muted">Total egresos: <span class="term-gs">Gs. 213.120.000</span></span></div>
 
-                    <div class="term-spacer"></div>
+                    <div class="term-spacer" data-delay="200"></div>
 
-                    <div class="term-line"><span class="term-arrow">→</span><span class="term-text">Invocando <span class="term-hl">Subagente Reportero</span>...</span></div>
-                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">Comparativa vs marzo: ventas +14%, margen +3pp</span></div>
-                    <div class="term-line term-sub"><span class="term-check">✓</span><span class="term-muted">HTML ejecutivo generado con gráficos</span></div>
+                    <div class="term-line" data-delay="600"><span class="term-arrow">→</span><span class="term-text">Cargando ventas del POS del cliente...</span></div>
+                    <div class="term-line term-sub" data-delay="350"><span class="term-check">✓</span><span class="term-muted">1.143 operaciones importadas</span></div>
+                    <div class="term-line term-sub" data-delay="220"><span class="term-check">✓</span><span class="term-muted">Total ventas registradas: <span class="term-gs">Gs. 291.840.000</span></span></div>
+                    <div class="term-line term-sub" data-delay="220"><span class="term-check">✓</span><span class="term-muted">Efectivo: 42% · Tarjeta: 38% · QR/Bancard: 20%</span></div>
 
-                    <div class="term-spacer"></div>
+                    <div class="term-spacer" data-delay="300"></div>
 
-                    <div class="term-line term-success"><span class="term-check-big">✓</span><span class="term-done">Informe listo</span></div>
-                    <div class="term-line term-sub"><span class="term-arrow-out">→</span><span class="term-muted">URL: <span class="term-link">https://estudio.pages.dev/ramirez-abril</span></span></div>
-                    <div class="term-line term-sub"><span class="term-arrow-out">→</span><span class="term-muted">PDF guardado en ~/exports/</span></div>
-                    <div class="term-line term-sub"><span class="term-arrow-out">→</span><span class="term-muted">Email enviado al cliente</span></div>
+                    <div class="term-line" data-delay="800"><span class="term-arrow">→</span><span class="term-text">Cruzando movimientos (ventas → depósitos banco)...</span></div>
+                    <div class="term-line term-sub" data-delay="600"><span class="term-check">✓</span><span class="term-muted">1.098 matches automáticos <span class="term-hl">(96%)</span></span></div>
+                    <div class="term-line term-sub" data-delay="400"><span class="term-warn">!</span><span class="term-muted">45 diferencias detectadas · analizando cada una</span></div>
 
-                    <div class="term-spacer"></div>
+                    <div class="term-spacer" data-delay="300"></div>
 
-                    <div class="term-line"><span class="term-comment"># tiempo total: 14.2s</span></div>
-                    <div class="term-line"><span class="term-prompt">&gt;</span><span class="term-cursor"></span></div>
+                    <div class="term-line" data-delay="700"><span class="term-arrow">→</span><span class="term-text">Clasificando diferencias...</span></div>
+                    <div class="term-line term-sub" data-delay="500"><span class="term-check">✓</span><span class="term-muted">31 depósitos del día siguiente (ventas sábado → lunes)</span></div>
+                    <div class="term-line term-sub" data-delay="300"><span class="term-check">✓</span><span class="term-muted">9 tarjetas con comisión Bancard (<span class="term-gs">Gs. 890.450</span> retenido)</span></div>
+                    <div class="term-line term-sub" data-delay="300"><span class="term-check">✓</span><span class="term-muted">3 efectivo no depositado (<span class="term-gs">Gs. 4.390.000</span> · preguntar cliente)</span></div>
+                    <div class="term-line term-sub" data-delay="300"><span class="term-warn">!</span><span class="term-muted">2 transferencias atípicas (<span class="term-gs">Gs. 2.100.000</span> · verificar origen)</span></div>
+
+                    <div class="term-spacer" data-delay="400"></div>
+
+                    <div class="term-line term-success" data-delay="600"><span class="term-check-big">✓</span><span class="term-done">Conciliación completa</span></div>
+                    <div class="term-line term-sub" data-delay="300"><span class="term-arrow-out">→</span><span class="term-muted">Informe HTML: <span class="term-link">https://estudio.pages.dev/donbeto-abril</span></span></div>
+                    <div class="term-line term-sub" data-delay="250"><span class="term-arrow-out">→</span><span class="term-muted">Excel resumen: ~/exports/conciliacion-abril.xlsx</span></div>
+                    <div class="term-line term-sub" data-delay="250"><span class="term-arrow-out">→</span><span class="term-muted">WhatsApp al cliente con las 5 consultas pendientes</span></div>
+
+                    <div class="term-spacer" data-delay="400"></div>
+
+                    <div class="term-line" data-delay="500"><span class="term-comment"># tiempo total: 11.4s · tiempo manual estimado: 3h 40min</span></div>
+                    <div class="term-line" data-delay="400"><span class="term-prompt">&gt;</span><span class="term-cursor"></span></div>
                 </div>
             </div>
 
-            <p class="flow-caption">Lo mismo que antes te tomaba 1 día entero, ahora ocurre en lo que tardás en servirte un tereré.</p>
+            <p class="flow-caption">Antes: 3 horas 40 minutos, dos Excel abiertos y una calculadora. Ahora: 11 segundos y un tereré.</p>
         </div>
     </div>
 </section>

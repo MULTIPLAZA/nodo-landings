@@ -1,3 +1,47 @@
+// --- Terminal typewriter animation (se dispara al entrar en viewport) ---
+(function initTerminalAnimation() {
+    const terminals = document.querySelectorAll('[data-terminal-animated]');
+    if (!terminals.length) return;
+
+    terminals.forEach((terminal) => {
+        const lines = terminal.querySelectorAll('.term-line, .term-spacer');
+        if (!lines.length) return;
+
+        let played = false;
+
+        const playSequence = () => {
+            if (played) return;
+            played = true;
+
+            let cumulativeDelay = 0;
+            lines.forEach((line) => {
+                const delay = parseInt(line.dataset.delay, 10) || 220;
+                cumulativeDelay += delay;
+                setTimeout(() => {
+                    line.classList.add('term-visible');
+                }, cumulativeDelay);
+            });
+        };
+
+        if (!('IntersectionObserver' in window)) {
+            playSequence();
+            return;
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    playSequence();
+                    observer.unobserve(terminal);
+                }
+            });
+        }, { threshold: 0.25, rootMargin: '0px 0px -80px 0px' });
+
+        observer.observe(terminal);
+    });
+})();
+
+// --- Formulario de registro → WhatsApp ---
 document.getElementById('registroForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
