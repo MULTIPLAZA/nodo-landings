@@ -473,6 +473,12 @@ section {
     margin-right: auto;
 }
 
+.experts-caption strong {
+    color: var(--coral);
+    font-weight: 600;
+    font-style: normal;
+}
+
 @media (max-width: 900px) {
     .experts-grid {
         grid-template-columns: 1fr;
