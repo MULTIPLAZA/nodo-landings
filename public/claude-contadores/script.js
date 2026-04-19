@@ -1,3 +1,56 @@
+// --- Code rain en el hero (efecto Claude trabajando de fondo) ---
+(function initCodeRain() {
+    const container = document.querySelector('.code-rain');
+    if (!container) return;
+    if (window.innerWidth < 720) return; // off en mobile
+
+    const snippets = [
+        '$ claude',
+        '> /conciliar',
+        '✓ 847 mov',
+        '✓ libro IVA',
+        '◉ CLAUDE.md',
+        '→ Auditor',
+        '✓ informe',
+        '/informe',
+        '14.2s',
+        '✓ deploy',
+        '> /libro-iva',
+        'Gs. 290M',
+        '◉ Reportero',
+        '✓ PDF',
+        '→ SIFEN',
+        'claude-code',
+        '✓ conciliado',
+        '→ ContadorBot',
+        '✓ validado',
+        '$ npm run',
+        '> /alertas',
+        '2.100.000 Gs',
+        '✓ publicado',
+        '> /declarar'
+    ];
+
+    const colCount = Math.max(8, Math.floor(window.innerWidth / 140));
+
+    for (let i = 0; i < colCount; i++) {
+        const col = document.createElement('div');
+        col.className = 'rain-col';
+        col.style.left = (i * (100 / colCount) + (Math.random() * 3 - 1.5)) + '%';
+        col.style.animationDuration = (22 + Math.random() * 18) + 's';
+        col.style.animationDelay = (-Math.random() * 30) + 's';
+
+        const lineCount = 8 + Math.floor(Math.random() * 6);
+        for (let j = 0; j < lineCount; j++) {
+            const span = document.createElement('span');
+            span.textContent = snippets[Math.floor(Math.random() * snippets.length)];
+            col.appendChild(span);
+        }
+
+        container.appendChild(col);
+    }
+})();
+
 // --- Terminal typewriter animation (se dispara al entrar en viewport) ---
 (function initTerminalAnimation() {
     const terminals = document.querySelectorAll('[data-terminal-animated]');
