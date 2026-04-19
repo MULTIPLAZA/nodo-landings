@@ -2202,32 +2202,134 @@ h3 {
 }
 
 @media (max-width: 720px) {
-    .pricing-card { padding: 26px 18px; margin: 40px -4px 0; }
+    .pricing-card {
+        padding: 24px 16px;
+        margin: 36px -4px 0;
+        overflow: hidden;
+    }
+
     .pricing-top {
         flex-direction: column;
-        gap: 18px;
-        margin-bottom: 24px;
-        padding-bottom: 22px;
+        gap: 16px;
+        margin-bottom: 22px;
+        padding-bottom: 20px;
     }
-    .pricing-amount { font-size: 40px; }
+
+    .pricing-kicker { font-size: 10.5px; margin-bottom: 8px; }
+    .pricing-amount { font-size: 36px; line-height: 1; }
+    .pricing-sub { font-size: 13px; line-height: 1.45; }
+
     .pricing-badge {
         align-self: stretch;
-        padding: 14px 18px;
-        text-align: left;
+        padding: 16px 18px;
+        text-align: center;
+        box-shadow: 0 6px 18px rgba(204, 120, 92, 0.25);
     }
-    .pricing-badge-headline { font-size: 16px; }
-    .pricing-badge-sub { max-width: 100%; }
+    .pricing-badge-title {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        margin-bottom: 8px;
+    }
+    .pricing-badge-headline {
+        font-size: 17px;
+        line-height: 1.2;
+        margin-bottom: 6px;
+    }
+    .pricing-badge-sub {
+        font-size: 12px;
+        max-width: 100%;
+        margin: 0 auto;
+        line-height: 1.45;
+    }
+
     .pricing-comparison {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 12px;
+        margin-bottom: 22px;
     }
-    .pricing-col { padding: 20px 18px; }
-    .pricing-col-title { font-size: 16px; }
+
+    .pricing-col {
+        padding: 20px 18px;
+        border-radius: 10px;
+    }
+
+    .pricing-col-header {
+        margin-bottom: 14px;
+        padding-bottom: 12px;
+    }
+
+    .pricing-col-label {
+        font-size: 9.5px;
+        letter-spacing: 0.12em;
+        padding: 3px 9px;
+    }
+
+    .pricing-col-title {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+
+    .pricing-col-list { gap: 8px; }
+    .pricing-col-list li {
+        font-size: 13px;
+        padding: 3px 0 3px 20px;
+        line-height: 1.45;
+    }
+    .pricing-col-list li::before { font-size: 12px; top: 3px; }
+
+    .pricing-col-list-premium li {
+        padding: 6px 0 6px 20px;
+    }
+    .pricing-col-list-premium li span {
+        font-size: 13.5px;
+        line-height: 1.35;
+    }
+    .pricing-col-list-premium li em {
+        font-size: 11.5px;
+        line-height: 1.4;
+    }
+
+    .pricing-col-included {
+        margin-top: 16px;
+        padding: 12px 14px;
+        gap: 8px;
+    }
+    .pricing-col-included-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    .pricing-col-included span:last-child {
+        font-size: 12.5px;
+        text-align: left;
+    }
+
+    .pricing-footer {
+        padding-top: 20px;
+    }
+
+    .pricing-all-inclusive {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        padding: 0 4px;
+    }
+
+    .pricing-note {
+        font-size: 11.5px;
+        padding: 0 4px;
+        line-height: 1.55;
+    }
+}
+
+@media (max-width: 400px) {
+    .pricing-card { padding: 20px 14px; }
+    .pricing-amount { font-size: 32px; }
+    .pricing-badge-headline { font-size: 16px; }
+    .pricing-col { padding: 18px 16px; }
+    .pricing-col-title { font-size: 15px; }
     .pricing-col-list li { font-size: 12.5px; }
     .pricing-col-list-premium li span { font-size: 13px; }
-    .pricing-col-included { padding: 12px 14px; }
-    .pricing-col-included span:last-child { font-size: 12.5px; }
-    .pricing-all-inclusive { font-size: 14px; }
 }
 
 /* --- CERTIFICATE MOCKUP --- */
