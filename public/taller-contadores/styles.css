@@ -2152,16 +2152,15 @@ h3 {
     letter-spacing: -0.01em;
 }
 
-.pricing-badge-same {
-    font-family: var(--mono);
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    padding: 3px 8px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 100px;
+.pricing-badge-strike {
+    font-family: var(--serif);
+    font-size: 15px;
     color: var(--cream);
-    font-weight: 600;
+    opacity: 0.55;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+    font-weight: 400;
+    letter-spacing: 0;
 }
 
 .pricing-badge-headline {
@@ -2285,6 +2284,31 @@ h3 {
     font-size: 12px;
     font-family: var(--mono);
     letter-spacing: 0.01em;
+}
+
+.pricing-col-premium-lead {
+    color: #D4D0C4;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 16px;
+}
+
+.pricing-col-premium-lead strong {
+    color: var(--coral);
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.pricing-col-premium-note {
+    color: #8a867c;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    line-height: 1.5;
+    margin: 16px 0 0;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(204, 120, 92, 0.2);
+    text-align: center;
 }
 
 .pricing-col-included {
