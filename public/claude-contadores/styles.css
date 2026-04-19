@@ -2139,33 +2139,57 @@ h3 {
     letter-spacing: 0.01em;
 }
 
-.pricing-col-value {
-    margin-top: 20px;
-    padding-top: 16px;
-    border-top: 1px dashed rgba(204, 120, 92, 0.35);
-    text-align: center;
+.pricing-col-included {
+    margin-top: 22px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: rgba(204, 120, 92, 0.18);
+    border: 1px dashed rgba(204, 120, 92, 0.5);
     display: flex;
-    flex-direction: column;
-    gap: 2px;
     align-items: center;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
-.pricing-col-value span {
-    font-family: var(--mono);
-    font-size: 11px;
-    color: #A8A39A;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
+.pricing-col-included-icon {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--coral);
+    color: var(--cream);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 13px;
+    flex-shrink: 0;
 }
 
-.pricing-col-value strong {
-    font-family: var(--serif);
-    font-size: 26px;
-    color: var(--coral);
+.pricing-col-included span:last-child {
+    font-family: var(--sans);
+    font-size: 13px;
+    color: var(--cream);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.pricing-footer {
+    padding-top: 24px;
+    border-top: 1px solid #2a2925;
+    text-align: center;
+}
+
+.pricing-all-inclusive {
+    font-size: 15px;
+    color: #D4D0C4;
+    margin-bottom: 14px;
+    line-height: 1.5;
+}
+
+.pricing-all-inclusive strong {
+    color: var(--cream);
     font-weight: 600;
-    line-height: 1;
-    margin: 4px 0;
-    letter-spacing: -0.01em;
 }
 
 .pricing-note {
@@ -2173,8 +2197,6 @@ h3 {
     font-size: 12px;
     color: #8a867c;
     text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #2a2925;
     margin: 0;
     line-height: 1.5;
 }
@@ -2203,7 +2225,9 @@ h3 {
     .pricing-col-title { font-size: 16px; }
     .pricing-col-list li { font-size: 12.5px; }
     .pricing-col-list-premium li span { font-size: 13px; }
-    .pricing-col-value strong { font-size: 22px; }
+    .pricing-col-included { padding: 12px 14px; }
+    .pricing-col-included span:last-child { font-size: 12.5px; }
+    .pricing-all-inclusive { font-size: 14px; }
 }
 
 /* --- CERTIFICATE MOCKUP --- */
