@@ -87,3 +87,43 @@ WhatsApp y Facebook cachean la preview. Si ya lo compartiste con una versión vi
 ## `favicon.ico` (opcional pero recomendado)
 
 Icono que aparece en la pestaña del navegador. 32×32 px idealmente, puede ser el logo de Claude en coral sobre cream. Generalo en [favicon.io](https://favicon.io).
+
+---
+
+## Fotos de expertos (opcional, para reemplazar iniciales)
+
+Si querés cambiar los círculos con iniciales (SB / WC / DA) por fotos reales de los referentes, seguí estos pasos:
+
+### Dónde conseguir fotos (de fuentes públicas oficiales)
+
+| Persona | Fuente recomendada |
+|---|---|
+| **Santiago Bilinkis** | [bilinkis.com](https://bilinkis.com) → sección "Prensa" o "Media" |
+| **Wenceslao Casares** | Foto pública de Wikipedia o su LinkedIn |
+| **Dario Amodei** | [anthropic.com/company](https://anthropic.com/company) → press kit / team |
+
+### Specs de cada foto
+
+- **Formato:** JPG (más liviano que PNG)
+- **Tamaño recomendado:** 400×400 px cuadrado (se recorta en círculo automáticamente)
+- **Peso:** < 80 KB cada una
+- **Nombres exactos:** `bilinkis.jpg`, `casares.jpg`, `amodei.jpg`
+
+### Cómo integrarlas
+
+1. Pegá los 3 archivos en esta carpeta (`public/taller-contadores/assets/`).
+2. Abrí `public/taller-contadores/index.html`.
+3. Buscá los comentarios `<!-- Reemplazar por <img src="..."> cuando tengas foto -->` en cada `.expert-card`.
+4. En cada uno:
+   - Borrá la línea `<span class="expert-initials">XX</span>`
+   - Descomentá el `<img>` de arriba (quitale los signos de comentario `<!--` y `-->`)
+5. Hacé `git add` + `commit` + `push`.
+
+### Nota legal
+
+Usar fotos de figuras públicas en marketing puede estar sujeto a restricciones. Idealmente:
+- **Fuentes oficiales** (press kits, sitios propios) — la foto suele tener licencia de uso editorial.
+- **Atribución** si la fuente lo requiere (raro en press kits pero revisá cada caso).
+- **Evitá** fotos de sitios random / stock no autorizado.
+
+En caso de duda, mantené las iniciales — funcionan perfectamente y evitan cualquier problema.

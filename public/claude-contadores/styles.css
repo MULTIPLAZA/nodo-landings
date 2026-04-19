@@ -395,13 +395,48 @@ section {
     background: var(--cream-dark);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 32px 28px 28px;
+    padding: 48px 28px 28px;
     position: relative;
-    margin: 0;
+    margin: 44px 0 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.expert-avatar {
+    position: absolute;
+    top: -44px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    box-shadow:
+        0 0 0 6px var(--cream),
+        0 12px 28px rgba(204, 120, 92, 0.35);
+    overflow: hidden;
+}
+
+.expert-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.expert-initials {
+    font-style: normal;
+    line-height: 1;
 }
 
 .expert-card:hover {
@@ -488,9 +523,19 @@ section {
 
 @media (max-width: 720px) {
     .experts { padding: 56px 0; }
-    .experts-grid { margin-top: 32px; }
-    .expert-card { padding: 26px 22px 22px; }
-    .expert-mark { font-size: 56px; margin-bottom: -10px; }
+    .experts-grid { margin-top: 32px; gap: 40px; }
+    .expert-card {
+        padding: 44px 22px 22px;
+        margin-top: 40px;
+    }
+    .expert-avatar {
+        width: 76px;
+        height: 76px;
+        font-size: 26px;
+        top: -38px;
+        box-shadow: 0 0 0 5px var(--cream), 0 10px 22px rgba(204, 120, 92, 0.3);
+    }
+    .expert-mark { font-size: 52px; margin-bottom: -10px; }
     .expert-text { font-size: 16px; }
     .expert-name { font-size: 16px; }
     .expert-role { font-size: 11px; }
