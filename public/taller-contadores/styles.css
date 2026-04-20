@@ -2950,84 +2950,92 @@ h3 {
 }
 
 @media (max-width: 720px) {
-    .cert-wrapper { padding: 16px 6px; margin: 36px -4px 0; border-radius: 10px; }
-    .cert-card { padding: 6px; }
+    .cert-wrapper { padding: 14px 6px; margin: 32px -4px 0; border-radius: 10px; }
+    .cert-card { padding: 5px; }
     .cert-border {
-        padding: 32px 14px 22px;
-        border-width: 2px;
+        padding: 26px 14px 16px;
+        border-width: 1.5px;
     }
-    .cert-ornament { font-size: 10px; opacity: 0.7; }
-    .cert-ornament-tl, .cert-ornament-tr { top: 10px; }
-    .cert-ornament-bl, .cert-ornament-br { bottom: 10px; }
-    .cert-ornament-tl, .cert-ornament-bl { left: 10px; }
-    .cert-ornament-tr, .cert-ornament-br { right: 10px; }
+    .cert-ornament { font-size: 9px; opacity: 0.65; }
+    .cert-ornament-tl, .cert-ornament-tr { top: 8px; }
+    .cert-ornament-bl, .cert-ornament-br { bottom: 8px; }
+    .cert-ornament-tl, .cert-ornament-bl { left: 8px; }
+    .cert-ornament-tr, .cert-ornament-br { right: 8px; }
 
-    .cert-header { margin-bottom: 22px; gap: 6px; flex-wrap: wrap; padding: 0 4px; }
-    .cert-logo { width: 16px; height: 16px; }
+    .cert-header { margin-bottom: 18px; gap: 6px; flex-wrap: wrap; padding: 0 4px; }
+    .cert-logo { width: 15px; height: 15px; }
     .cert-brand-line { font-size: 8.5px; letter-spacing: 0.18em; }
 
-    .cert-title-wrap { margin-bottom: 26px; }
-    .cert-kicker { font-size: 9px; letter-spacing: 0.22em; margin-bottom: 10px; }
-    .cert-heading { font-size: 19px; line-height: 1.2; letter-spacing: 0; }
+    .cert-title-wrap { margin-bottom: 20px; }
+    .cert-kicker { font-size: 8.5px; letter-spacing: 0.22em; margin-bottom: 8px; }
+    .cert-heading { font-size: 17px; line-height: 1.2; letter-spacing: 0; padding: 0 4px; }
     .cert-heading br { display: none; }
-    .cert-rule { width: 70px; margin: 16px auto; }
-    .cert-rule::before, .cert-rule::after { font-size: 9px; }
-    .cert-rule::before { left: -14px; }
-    .cert-rule::after { right: -14px; }
-    .cert-subheading { font-size: 11px; padding: 0 12px; }
+    .cert-rule { width: 60px; margin: 12px auto 0; }
+    .cert-rule::before, .cert-rule::after { font-size: 8px; top: -5px; }
+    .cert-rule::before { left: -12px; }
+    .cert-rule::after { right: -12px; }
 
-    .cert-body { margin-bottom: 28px; }
-    .cert-lead { font-size: 11.5px; margin-bottom: 14px; letter-spacing: 0.08em; }
+    .cert-body { margin-bottom: 18px; }
+    .cert-lead { font-size: 10.5px; margin-bottom: 10px; letter-spacing: 0.08em; }
     .cert-recipient {
         display: block;
-        padding: 0 0 8px;
-        font-size: 16px;
-        margin: 0 auto 14px;
+        padding: 0 10px 6px;
+        font-size: 15px;
+        margin: 0 auto 12px;
         max-width: 100%;
         word-break: normal;
         line-height: 1.3;
     }
-    .cert-desc { font-size: 12px; margin-bottom: 14px; line-height: 1.55; padding: 0 4px; }
-    .cert-detail { font-size: 9px; letter-spacing: 0.12em; }
+    .cert-desc { font-size: 11.5px; margin-bottom: 10px; line-height: 1.5; padding: 0 6px; }
+    .cert-detail { font-size: 8.5px; letter-spacing: 0.12em; }
 
+    /* Footer compacto: solo firma del instructor + sello (se oculta la 2da firma) */
     .cert-footer {
-        grid-template-columns: 1fr;
-        gap: 22px;
-        margin-bottom: 22px;
-        padding-bottom: 20px;
+        grid-template-columns: 1fr auto;
+        gap: 16px;
+        margin-bottom: 14px;
+        padding-bottom: 14px;
+        align-items: center;
     }
-    .cert-sig-line { margin: 0 auto 6px; width: 60%; }
-    .cert-sig-name { font-size: 12px; }
-    .cert-sig-role { font-size: 8.5px; }
-    .cert-seal-ring { width: 52px; height: 52px; border-width: 1.5px; }
-    .cert-seal-logo { width: 24px; height: 24px; }
-    .cert-seal-text { font-size: 8px; }
+    .cert-footer .cert-sig:last-of-type { display: none; }
+    .cert-sig { text-align: center; }
+    .cert-sig-line { margin: 0 auto 5px; width: 100%; max-width: 140px; }
+    .cert-sig-name { font-size: 11px; }
+    .cert-sig-role { font-size: 8px; letter-spacing: 0.08em; }
+    .cert-seal-ring { width: 44px; height: 44px; border-width: 1.5px; margin-bottom: 4px; }
+    .cert-seal-logo { width: 22px; height: 22px; }
+    .cert-seal-text { font-size: 7.5px; letter-spacing: 0.1em; }
 
+    /* Meta compacta: N° | QR | URL en una sola fila */
     .cert-meta {
-        grid-template-columns: 1fr;
-        gap: 14px;
-        text-align: center;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 10px;
+        align-items: center;
     }
-    .cert-meta-col { text-align: center; }
-    .cert-meta-col.cert-meta-right { text-align: center; }
-    .cert-qr-wrap { order: -1; margin: 0 auto 4px; }
-    .cert-qr { width: 52px; height: 52px; }
-    .cert-meta-label { font-size: 8.5px; }
-    .cert-meta-value { font-size: 10.5px; }
+    .cert-meta-col { text-align: left; }
+    .cert-meta-col.cert-meta-right { text-align: right; }
+    .cert-qr-wrap { order: 0; margin: 0; padding: 2px; }
+    .cert-qr { width: 38px; height: 38px; }
+    .cert-meta-label { font-size: 7.5px; letter-spacing: 0.08em; margin-bottom: 1px; }
+    .cert-meta-value { font-size: 9.5px; word-break: break-all; line-height: 1.3; }
 
-    .cert-features { grid-template-columns: 1fr; gap: 8px; margin-top: 28px; }
-    .cert-feature { padding: 12px 14px; }
-    .cert-feature-icon { width: 24px; height: 24px; font-size: 12px; }
-    .cert-feature strong { font-size: 14px; }
-    .cert-feature span { font-size: 11.5px; }
+    .cert-features { grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 24px; }
+    .cert-feature { padding: 10px 12px; }
+    .cert-feature-icon { width: 22px; height: 22px; font-size: 11px; }
+    .cert-feature strong { font-size: 13px; }
+    .cert-feature span { font-size: 11px; }
 }
 
 @media (max-width: 400px) {
-    .cert-border { padding: 26px 10px 18px; }
-    .cert-heading { font-size: 17px; }
-    .cert-recipient { font-size: 15px; }
-    .cert-desc { font-size: 11.5px; }
+    .cert-border { padding: 22px 10px 14px; }
+    .cert-heading { font-size: 15px; }
+    .cert-recipient { font-size: 14px; padding: 0 6px 5px; }
+    .cert-desc { font-size: 11px; }
     .cert-brand-line { font-size: 8px; }
+    .cert-meta { grid-template-columns: 1fr auto 1fr; gap: 8px; }
+    .cert-qr { width: 34px; height: 34px; }
+    .cert-meta-value { font-size: 9px; }
+    .cert-features { grid-template-columns: 1fr; }
 }
 
 /* --- FORM --- */
